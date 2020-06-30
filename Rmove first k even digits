@@ -1,0 +1,16 @@
+a=list(map(int,input().split()))
+b=list(map(int,input().split()))
+n=a[0]
+k=a[1]
+s=0
+for i in range(len(b)):
+    a=list(str(b[i]))
+    h=0
+    for j in range(len(a)):
+        if int(a[j])%2==0 and k!=0:
+            k=k-1
+        else:
+            h=h*10+int(a[j])
+    s=s+h
+print(s)
+    
