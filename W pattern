@@ -1,0 +1,40 @@
+a=input().strip()
+b=input().strip()
+c=input().strip()
+d=[len(a),len(b),len(c)]
+m=max(d)
+s=min(d)
+d=[a,b,c]
+p=max(d)
+d.remove(p)
+h=len(p)//2
+if p[0]==d[0][len(d[0])-1]:
+    f=d[0]
+    l=d[1]
+else:
+    f=d[1]
+    l=d[0]
+m=m-3
+m=m//2
+o=1
+y=1
+print(f[0],end="")
+print('*'*m,end="")
+print(p[h],end="")
+print('*'*m,end="")
+print(l[0])
+m=m-1
+for i in range(1,s-1):
+    print(f[i],end="")
+    print('*'*m,end="")
+    print(p[h-o],end="")
+    print('*'*y,end="")
+    print(p[h+o],end="")
+    print('*'*m,end="")
+    print(l[i])
+    m=m-1
+    y=y+2
+    o=o+1
+print(f[s-1],end="")
+print('*'*(len(p)-2),end="")
+print(l[s-1])
