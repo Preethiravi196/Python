@@ -1,0 +1,15 @@
+a=list(map(int,input().split()))
+b=[]
+while a[0]>0 or a[1]>0:
+    if a[0]>0:
+        b.append(int(a[0]%2))
+        a[0]=int(a[0]/2)
+    if a[1]>0:
+        b.append(int(a[1]%2))
+        a[1]=int(a[1]/2)
+m=0
+s=0
+for i in range(len(b)-1,-1,-1):
+    s=s+pow(2,m)*b[i]
+    m=m+1
+print(b,s)
