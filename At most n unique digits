@@ -1,0 +1,12 @@
+a=list(map(int,input().split()))
+n=a[2]
+f=0
+for i in range(a[0],a[1]+1):
+    h=str(i)
+    h=list(dict.fromkeys(h))
+    if len(h)<=n:
+        f=1
+        print(i,end=" ")
+if f==0:
+    print("-1")
+        
