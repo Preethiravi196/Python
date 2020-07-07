@@ -1,0 +1,19 @@
+def find_gcd(x, y): 
+    while(y): 
+        x, y = y, x % y 
+    return x 
+n=list(map(int,input().split()))
+a=list(map(int,input().split()))
+k=n[1]
+n=n[0]
+for i in range(k):
+    b=list(map(int,input().split()))
+    h=b[0]
+    m=b[1]
+    num1=a[h-1] 
+    num2=a[h] 
+    gcd=find_gcd(num1,num2) 
+    if (h+1)<m :
+        for j in range(h+1,m):
+            gcd=find_gcd(gcd,a[j])
+    print(gcd,end=" ")
