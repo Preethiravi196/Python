@@ -1,0 +1,13 @@
+a=input().strip()
+a=list(a)
+b=[]
+for i in a:
+    if i=='1' or i=='0':
+        b.append(int(i))
+h=0
+s=0
+for i in range(len(b)-1,-1,-1):
+    s=s+pow(2,h)*b[i]
+    h=h+1
+print(s)
+    
