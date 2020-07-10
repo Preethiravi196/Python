@@ -1,0 +1,20 @@
+n=int(input())
+b={}
+p=[]
+for i in range(n):
+    a=list(map(str,input().split()))
+    m=len(a)-1
+    if a[m] not in b:
+        b.update({a[m]:1})
+        p.append(a[m])
+    else:
+        h=b.get(a[m])
+        b[a[m]]=h+1
+print(b)
+m=list(b.values())
+h=sorted(m)
+print(p,m)
+for i in range(len(h)-1,-1,-1):
+    print(p[m.index(h[i])],h[i])
+    m[m.index(h[i])]=0
+    
