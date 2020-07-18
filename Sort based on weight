@@ -1,0 +1,30 @@
+import math
+def isPerf(x):
+    s=math.sqrt(x)
+    return ((s-math.floor(s))==0)
+n=int(input())
+a=list(map(int,input().split()))
+d={}
+h=[]
+for i in range(len(a)):
+    w=0
+    if isPerf(a[i]):
+        w=w+5
+    if a[i]%4==0 and a[i]%6==0:
+        w=w+4
+    if a[i]%2==0:
+        w=w+3
+    h.append(w)
+h=sorted(h)
+h=list(dict.fromkeys(h))
+for i in range(len(h)):
+    for j in range(len(a)):
+        w=0
+        if isPerf(a[j]):
+            w=w+5
+        if a[j]%4==0 and a[j]%6==0:
+            w=w+4
+        if a[j]%2==0:
+            w=w+3
+        if w==h[i]:
+            print(a[j],w)
