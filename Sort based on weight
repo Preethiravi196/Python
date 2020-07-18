@@ -28,3 +28,4 @@ for i in range(len(h)):
             w=w+3
         if w==h[i]:
             print(a[j],w)
+ 
