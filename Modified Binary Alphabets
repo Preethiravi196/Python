@@ -1,0 +1,28 @@
+n=int(input())
+a=[]
+while n>0:
+    a.append(int(n%2))
+    n=n//2
+b=[]
+h='A'
+m='a'
+c=[]
+l=[]
+for i in range(len(a)-1,-1,-1):
+    b.append(a[i])
+    if a[i]==0:
+        c.append(h)
+        h=chr(ord(h)+1)
+for i in range(len(b)):
+    if b[i]==1:
+        l.append(m)
+        m=chr(ord(m)+1)
+r=len(c)-1
+p=0
+for i in range(len(b)):
+    if b[i]==0:
+        print(c[r],end="")
+        r=r-1
+    else:
+        print(l[p],end="")
+        p=p+1
