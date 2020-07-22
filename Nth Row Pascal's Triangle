@@ -1,0 +1,16 @@
+def binomialCoeff(n, k) : 
+	res = 1
+	if (k > n - k) : 
+		k = n - k 
+	for i in range(0 , k) : 
+		res = res * (n - i) 
+		res = res // (i + 1) 
+	return res 
+n = int(input())
+a=[]
+line=n-1
+for i in range(0, line + 1) : 
+	a.append((binomialCoeff(line, i))
+for i in a:
+  print(i,end=" ")
+	
