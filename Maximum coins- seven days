@@ -1,0 +1,16 @@
+s=list(map(int,input().split()))
+d=s[1]
+s=s[0]
+c=0
+while c<7:
+    if d==7 or d==1:
+        s=s*2
+        if d==7:
+            d=1
+        else:
+            d=d+1
+    else:
+        s=s+5
+        d=d+1
+    c=c+1
+print(s) 
