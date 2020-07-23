@@ -1,0 +1,11 @@
+a=input()
+h=a.index('X')
+for i in range(0,10):
+    m=a.replace("X",str(i))
+    if h==0 and i==0:
+        continue
+    else:
+        if int(m)%8==0:
+            print(i)
+            exit(1)
+print("-1")
