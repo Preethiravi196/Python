@@ -1,0 +1,5 @@
+n=int(input())
+b=bin(n)
+b=b[2:]
+b=b.replace('0','1',1)
+print(int(b,2))
