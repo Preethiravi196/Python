@@ -1,9 +1,9 @@
 n,k=map(int,input().split())
 matrix=[list(map(int,input().split())) for row in range(n)]
-flag=
+flag=0
 for col in range (n):
     if matrix[n//2][col]!=k:
-        flag=
+        flag=0
         break
 for ctr in range(n//2):
     if matrix[ctr][n//2+ctr]!=k or matrix[ctr][n//2-ctr]!=k:
