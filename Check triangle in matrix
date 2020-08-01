@@ -1,0 +1,15 @@
+n,k=map(int,input().split())
+matrix=[list(map(int,input().split())) for row in range(n)]
+flag=
+for col in range (n):
+    if matrix[n//2][col]!=k:
+        flag=
+        break
+for ctr in range(n//2):
+    if matrix[ctr][n//2+ctr]!=k or matrix[ctr][n//2-ctr]!=k:
+        flag=1
+        break
+if flag==0:
+    print("YES")
+else:
+    print("NO")
