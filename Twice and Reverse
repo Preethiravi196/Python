@@ -21,4 +21,3 @@ for i in range(b-1):
             t.append(2*m[j])
         m=[]
     print()
-        
