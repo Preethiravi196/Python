@@ -1,0 +1,10 @@
+n,k=map(int,input().split())
+f=1
+while n>0:
+    if n%k==0:
+        print(n)
+        f=0
+        break
+    n//=10
+if f==1:
+    print(-1)
