@@ -1,0 +1,38 @@
+a,b=list(map(int,input().split()))
+h=0
+p=0
+m=0
+r=0
+while a>0:
+    t=int(a%2)
+    if t==1:
+        h+=1
+    else:
+        p+=1
+    a=a//2
+while b>0:
+    t=int(b%2)
+    if t==1:
+        m+=1
+    else:
+        r+=1
+    b=b//2
+if t==1:
+    if m==h and p>=r:
+        print("YES")
+    else:
+        print("NO")
+elif r==0:
+    if m==h:
+        print("YES")
+    else:
+        print("NO")
+elif m==0:
+    if r==p:
+        print("YES")
+    else:
+        print("NO")
+elif h==m and p==r:
+    print("YES")
+else:
+    print("NO")
