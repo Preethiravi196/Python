@@ -1,0 +1,9 @@
+a,b=list(map(int,input().split()))
+f=0
+for i in range(a,b+1):
+    h=list(str(i))
+    if h.count('0')>=1:
+        print(i,end=" ")
+        f=1
+if f==0:
+    print(-1)
