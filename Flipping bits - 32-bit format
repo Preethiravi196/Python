@@ -1,0 +1,19 @@
+n=int(input())
+a=list(map(int,input().split()))
+for i in range(n):
+    b=[]
+    while a[i]>0:
+        b.append(int(a[i]%2))
+        a[i]=a[i]//2
+    if len(b)<32:
+        for j in range(0,32-len(b)):
+            b.append(0)
+    s=0
+    h=0
+    for j in range(len(b)):
+        if b[j]==1:
+            s=s+0*pow(2,h)
+        else:
+            s=s+1*pow(2,h)
+        h=h+1
+    print(s)
