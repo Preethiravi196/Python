@@ -1,0 +1,14 @@
+a=input().strip()
+b=input().strip()
+n=int(input())
+h=[]
+f=0
+for i in range(len(a)-n+1):
+    if a[i:i+n] in b:
+        h.append(a[i:i+n])
+        f=1
+if f==0:
+    print(-1)
+else:
+    h=sorted(h)
+    print(*h,sep=" ")
