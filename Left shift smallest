@@ -1,0 +1,9 @@
+a=int(input())
+m=(str(a))
+h=a
+for i in range(len(m)):
+    p=m[1:]+m[0:1]
+    if h>int(p):
+        h=int(p)
+    m=p
+print(h)
