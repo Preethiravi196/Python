@@ -1,0 +1,7 @@
+r,c=map(int,input().split())
+m=[list(map(int,input().split())) for i in range(r)]
+t=zip(*m)
+s=sorted(t,key=max)
+f=zip(*s)
+for i in f:
+    print(*i)
