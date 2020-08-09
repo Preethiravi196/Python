@@ -1,0 +1,14 @@
+s=input().strip()
+v,c=[],[]
+for i in s:
+    if i in "AEIOUaeiou":
+        v.append(i)
+    else:
+        c.append(i)
+c=c[::-1]
+m=max(len(v),len(c))
+for i in range(0,m):
+    if i<len(v):
+        print(v[i],end="")
+    if i<len(c):
+        print(c[i],end="")
