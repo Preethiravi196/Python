@@ -1,0 +1,19 @@
+r,c=map(int,input().split())
+m=[list(map(int,input().split()))for i in range(r)]
+f=1
+for i in range(r):
+    row=[]
+    for j in range(c):
+        row.append(m[i][j])
+    if row!=row[::-1]:
+        f=0
+for j in range(c):
+    col=[]
+    for i in range(r):
+        col.append(m[i][j])
+    if col!=col[::-1]:
+        f=0
+if f:
+    print("YES")
+else:
+    print("NO")
