@@ -1,0 +1,12 @@
+from itertools import combinations as com
+n=input().strip()
+u=int(n[-1])
+o=[int(d) for d in n[:-1]]
+c=0
+cl=[]
+for p in com(o,2):
+    if sum(p)==u and p not in cl:
+        c+=1
+        cl.append(p)
+        cl.append(p[::-1])
+print(c if c>0 else -1)
