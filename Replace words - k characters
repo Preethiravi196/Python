@@ -1,0 +1,12 @@
+s=input().split()
+n=int(s[1])
+m=s[0]
+s=s[0].lower()
+a=list(input().split())
+for i in range(len(a)):
+    h=a[i][0:n]
+    h=h.lower()
+    if s[0:n]==h:
+        print(m,end=" ")
+    else:
+        print(a[i],end=" ")
