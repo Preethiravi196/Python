@@ -1,0 +1,8 @@
+from datetime import datetime
+a=input().strip()
+b=input().strip()
+aa=datetime.strptime(a,"%H:%M:%S")
+bb=datetime.strptime(b,"%H:%M:%S")
+c=str(bb-aa)
+c=[time.zfill(2) for time in c.split(":")]
+print(':'.join(c))
