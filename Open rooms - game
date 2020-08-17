@@ -1,0 +1,11 @@
+n=int(input())
+r=list(map(int,input().split()))
+p=[]
+for i in range(0,n):
+    c=0
+    k=r[i]
+    while k!=i:
+        c+=1
+        k=r[k]
+    p.append(c+1)
+print(max(p))
