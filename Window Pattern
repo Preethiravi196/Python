@@ -1,0 +1,11 @@
+def rowSep():
+    print('+'+('-'*n+'+')*s)
+def row():
+    print('|'+('*'*n+'|')*s)
+n,x=map(int,input().split())
+s=int(x**0.5)
+rowSep()
+for i in range(s):
+    for j in range(n):
+        row()
+    rowSep()
