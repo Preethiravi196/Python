@@ -1,0 +1,20 @@
+def check(c1,c2):
+  v="AEIOUaeiou"
+  if c1 in v and c2 in v:
+      return True
+  if c1 not in v and c2 not in v:
+      return True
+  return False
+s1=input().strip()
+s2=input().strip()
+i=len(s1)-1
+p=s1
+while i>=0:
+  print(p[i],end="")
+  if check(s1[i],s2[i]):
+    if p==s1:
+      p=s2
+    else:
+      p=s1
+    print(p[i],end="")
+  i=i-1
