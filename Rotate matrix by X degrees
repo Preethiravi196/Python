@@ -1,0 +1,14 @@
+n=int(input())
+m=[list(map(int,input().split())) for i in range(n)]
+x=int(input())%360
+if x not in [0,90,180,270]:
+    print("INVALID")
+else:
+    if x==90:
+        m=[i[::-1] for i in zip(*m)]
+    elif x==180:
+        m=[i[::-1] for i in m][::-1]
+    elif x==270:
+        m=[i for i in zip(*m)][::-1]
+    for i in m:
+        print(*i)
