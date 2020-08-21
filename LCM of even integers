@@ -1,0 +1,12 @@
+import math
+n=int(input())
+a=list(map(int,input().split()))
+b=[]
+for i in a:
+    if i%2==0:
+        b.append(i)
+lcm=b[0]
+for i in range(1,len(b)):
+    lcm=lcm*b[i]//math.gcd(lcm,b[i])
+print(lcm)
+    
