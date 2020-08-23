@@ -1,0 +1,11 @@
+n,t=map(int,input().split())
+i=list(map(int,input().split()))
+a,b=0,0
+i.sort()
+for j in i:
+    a+=j
+    if a<=t:
+        b+=1
+    else:
+        break
+print(b)
