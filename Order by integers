@@ -1,0 +1,15 @@
+n,k=map(int,input().split())
+a=list(map(int,input().split()))
+b=list(map(int,input().split()))
+c=[]
+d=[]
+for i in a:
+    if i not in b:
+        c.append(i)
+    else:
+        d.append(i)
+c=sorted(c)
+for j in b:
+    for i in range(d.count(j)):
+        print(j,end=" ")
+print(*c,sep=" ")
