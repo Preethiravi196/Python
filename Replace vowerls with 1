@@ -1,0 +1,14 @@
+a=(input())
+c=0
+b=['a','e','i','o','u','A','E','I','O','U']
+if a.isalpha():
+    for i in range(len(a)):
+        if a[i] in b:
+            print(1,end="")
+            c=c+1
+        else:
+            print(a[i],end="")
+    print(end=" ")
+    print(c)
+else:
+    print("Invalid")
