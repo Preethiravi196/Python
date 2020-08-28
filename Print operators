@@ -1,0 +1,14 @@
+n=int(input())
+l=list(map(int,input().split()))
+p,q=map(int,input().split())
+for i in l:
+    o='#'
+    if p//q==i:
+        o='/'
+    elif p*q==i:
+        o='*'
+    elif p+q==i:
+        o='+'
+    elif p-q==i:
+        o='-'
+    print(o,end=" ")
