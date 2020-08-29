@@ -1,0 +1,29 @@
+a=input().split()
+c=[]
+r=[]
+l=[]
+for i in a:
+    c.append(sorted(list(i)))
+n=len(a[0])
+count=0
+for i in range(n):
+    t=(input().split())
+    r.append(t[len(t)-1])
+    l.append(t[0])
+    t=sorted(t)
+    if i==0 or i==n-1:
+        if t in c:
+            count=+1
+            c.remove(t)
+r=sorted(r)
+l=sorted(l)
+if r in c:
+    count+=1
+    c.remove(r)
+if l in c:
+    count+=1
+    c.remove(l)
+if count==3:
+    print("Yes")
+else:
+    print("No")
