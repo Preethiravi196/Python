@@ -1,0 +1,15 @@
+a=list(input())
+b=[]
+for i in range(0,len(a)):
+    if i%2!=0:
+        b.append(a[i])
+b=b[len(b)-1:]+b[0:len(b)-1]
+s=0
+j=0
+for i in range(len(a)):
+    if i%2!=0:
+        s=s*10+int(b[j])
+        j=j+1
+    else:
+        s=s*10+int(a[i])
+print(s*2)
