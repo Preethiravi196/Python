@@ -1,0 +1,18 @@
+a,b=list(map(str,input().split(' ')))
+c=[]
+d=[]
+f=0
+for i in range(len(b)):
+    if b[i]==a[i]:
+        f=f+1
+    else:
+        c.append(a[i])
+        d.append(b[i])
+p=0
+c=list(dict.fromkeys(c))
+d=list(dict.fromkeys(d))
+for i in c:
+    if i in d: 
+        p=p+1
+print(f)
+print(p)
