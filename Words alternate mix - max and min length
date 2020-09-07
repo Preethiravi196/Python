@@ -1,0 +1,22 @@
+a=list(input().split())
+j=len(a)-1
+for i in range(int(len(a)/2)):
+    if i%2==0:
+        h=min(len(a[i]),len(a[j]))
+        if len(a[i])==len(a[j]):
+            print(a[i],end=" ")
+            print(a[j],end=" ")
+        elif len(a[i])==h:
+            print(a[i],end=" ")
+        else:
+            print(a[j],end=" ")
+    else:
+        h=max(len(a[i]),len(a[j]))
+        if len(a[i])==len(a[j]):
+            print(a[i],end=" ")
+            print(a[j],end=" ")
+        elif h==len(a[i]):
+            print(a[i],end=" ")
+        else:
+            print(a[j],end=" ")
+    j=j-1
