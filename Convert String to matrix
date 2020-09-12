@@ -1,0 +1,16 @@
+import math
+s=input().strip()
+c=int(input())
+s=s.replace(" ","*")
+r=math.ceil(len(s)/c)
+m=[['0' for col in range(c)] for row in range(r)]
+index=0
+for i in range(r-1,-1,-1):
+    for j in range(c-1,-1,-1):
+        if index<len(s):
+            m[i][j]=s[index]
+            index+=1
+        else:
+            m[i][j]='#'
+for i in m:
+    print(*i)
