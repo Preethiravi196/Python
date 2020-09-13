@@ -1,0 +1,13 @@
+r,c=map(int,input().split())
+m=[input().split() for i in range(r)]
+for i in range(r+c-1):
+    h=[]
+    for j in range(r):
+        for k in range(c):
+            if j+k==i:
+                h.append(m[j][k])
+    if h!=sorted(h):
+        print("NO")
+        break
+else:
+    print("YES")
