@@ -1,0 +1,27 @@
+a=list(input().split(','))
+b="QWERTYUIOPqwertyuiop"
+c="ASDFGHJKLasdfghjkl"
+d="ZXCVBNMzxcvbnm"
+f=0
+for i in a:
+    h=0
+    if i[0] in b:
+        for j in range(1,len(i)):
+            if i[j] not in b:
+                h=1
+                break
+    elif i[0] in c:
+        for j in range(1,len(i)):
+            if i[j] not in c:
+                h=1
+                break
+    else:
+        for j in range(1,len(i)):
+            if i[j] not in d:
+                h=1
+                break
+    if h==0:
+        print(i,end=" ")
+        f=1
+if f==0:
+    print("-1")
