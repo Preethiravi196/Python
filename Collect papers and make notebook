@@ -1,0 +1,12 @@
+n=int(input())
+a=list(map(int,input().split()))
+b=list(map(int,input().split()))
+t=a
+for i in range(n):
+    print(t[i],end=" ")
+    if a[i]%2==b[i]%2:
+        if t==a:
+            t=b
+        else:
+            t=a
+        print(t[i],end=" ")
