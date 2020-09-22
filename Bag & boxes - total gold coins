@@ -1,0 +1,10 @@
+n=int(input())
+b=list(map(str,input().split()))
+m,t=-1,0
+for i in b:
+    for j in sorted(i):
+        if int(j) >= m:
+            t+=int(j)
+            m=int(j)
+            break
+print(t)
