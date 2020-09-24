@@ -1,0 +1,16 @@
+n=int(input())
+c=[]
+a=list(map(int,input().split()))
+for i in range(n):
+    h=str(a[i])
+    h=h[::-1]
+    c.append(int(h))
+c=sorted(c)
+for i in range(n):
+    h=c[i]
+    for j in range(len(a)):
+        m=str(a[j])
+        if int(m[::-1])==h:
+            print(a[j],end=" ")
+            a.remove(a[j])
+            break
