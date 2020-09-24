@@ -1,0 +1,8 @@
+a=input().strip()
+s=""
+for i in a:
+    if int(i)%2==0:
+        s=s+"0"
+    else:
+        s=s+"1"
+print(int(s,2))
