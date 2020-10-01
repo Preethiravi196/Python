@@ -1,0 +1,31 @@
+a=list(input().strip())
+b=list(input())
+if len(a)!=len(b):
+    print("no")
+else:
+    f=0
+    a=sorted(a)
+    p=list(dict.fromkeys(a))
+    b=sorted(b)
+    h=list(dict.fromkeys(b))
+    m=len(p)
+    i=0
+    while i<len(p):
+        c=a.count(p[i])
+        j=0
+        r=len(h)
+        while j<len(h):
+            if c==b.count(h[j]):
+                p.remove(p[i])
+                h.remove(h[j])
+                i=i-1
+                j=j-1
+                m=m-1
+            else:
+                f=1
+            j=j+1
+        i=i+1
+    if len(p)!=len(h):
+        print("no")
+    else:
+        print("yes")
