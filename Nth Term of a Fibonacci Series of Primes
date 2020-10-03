@@ -1,0 +1,35 @@
+from itertools import permutations
+def isPrime(h):
+    for i in range(2,h):
+        if int(h%i)==0:
+            return 0
+    return 1
+x=int(input())
+y=int(input())
+a=[]
+h=x
+while h<=y:
+    if isPrime(h)==1 or h==2:
+        a.append(h)
+    h=h+1
+b=list(permutations(a,2))
+m=[]
+g=[]
+for i in b:
+    c=[str(h) for h in i]
+    c="".join(c)
+    c=int(c)
+    if isPrime(c)==1:
+        m.append(c)
+m=list(dict.fromkeys(m))
+m=sorted(m)
+f=min(m)
+l=max(m)
+g.append(f)
+h=l
+for i in range(len(m)-1):
+    g.append(h)
+    h=f+l
+    f=l
+    l=h
+print(g[len(g)])
