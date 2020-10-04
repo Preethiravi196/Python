@@ -1,0 +1,25 @@
+n=int(input())
+h=(n*(n-1))//2
+d={}
+for i in range(h):
+    a=list(input().split())
+    t1,t2=a[0],a[1]
+    b,c=a[2].split('-')
+    if t1 not in d:
+        d[t1]=0
+    if t2 not in d:
+        d[t2]=0
+    if b>c:
+        h=d.get(t1)
+        d[t1]=h+3
+    elif c>b:
+        h=d.get(t2)
+        d[t2]=h+3
+    else:
+        h=d.get(t1)
+        m=d.get(t2)
+        d[t1]=h+1
+        d[t2]=m+1
+k=max(d,key=d.get) 
+print(k)
+print(d.get(k))
