@@ -1,0 +1,16 @@
+n=int(input())
+a="ABCDEFG"
+for i in range(n):
+    b=input().strip()
+    m=""
+    h=""
+    for j in range(len(b)):
+        if b.count(b[j])==2:
+            h=b[j]
+            for k in a:
+                if k not in b:
+                    m=k
+    if h=="" and m=="":
+        print('-1')
+    else:
+        print(m,h)
