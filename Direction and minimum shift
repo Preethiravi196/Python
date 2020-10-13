@@ -1,0 +1,24 @@
+a=input().strip()
+b=input().strip()
+r=0
+l=0
+if a==b:
+    print("A",end="")
+    print(0)
+else:
+    for i in range(len(a)):
+        if a[i]==b[0]:
+            if a[i:] in b:
+                r=len(a[i:])
+                l=len(a[:i])
+                break
+    if r==l:
+        print("A",end="")
+        print(r)
+    elif r<l:
+        print("R",end="")
+        print(r)
+    elif l<r:
+        print("L",end="")
+        print(l)
+    
